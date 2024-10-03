@@ -125,7 +125,7 @@ function App() {
       if (coordinates.lat && coordinates.lng) {
         try {
           const response = await fetch(
-            `http://api.aladhan.com/v1/timings?latitude=${coordinates.lat}&longitude=${coordinates.lng}&method=5`
+            `https://api.aladhan.com/v1/timings?latitude=${coordinates.lat}&longitude=${coordinates.lng}&method=5`
           );
           const data = await response.json();
           setTimes(data.data.timings);
